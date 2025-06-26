@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -8,19 +10,19 @@ function App() {
   const [mode, setMode] = useState("light");
 
   const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-    } else {
-      setMode("light");
-    }
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
-    <div className="App">
-      <NavBar mode={mode} toggleMode={toggleMode} />
-      {/* <Home mode={mode} /> */}
-      <About mode={mode} />
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar mode={mode} toggleMode={toggleMode} />
+        <Routes>
+          <Route path="/" element={<Home mode={mode} />} />
+          <Route path="/about" element={<About mode={mode} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Moon from "../../assets/Moon.svg";
 import Sun from "../../assets/Sun.svg";
@@ -15,13 +16,13 @@ const NavBar = ({ mode, toggleMode }) => {
     >
       <div className="container-fluid">
         <div className="d-flex align-items-center justify-content-between w-100 flex-nowrap">
-          <a
+          <Link
             className="navbar-brand navbar-logo d-flex flex-row justify-content-center align-items-center"
             href="/"
           >
             <img src={`${mode === "light" ? Logo : LogoWhite}`} alt="logo" />
             <p className="m-0 ms-2">ANISH KUMAR SINHA</p>
-          </a>
+          </Link>
 
           <div className="d-flex align-items-center d-lg-none">
             <button
@@ -51,16 +52,16 @@ const NavBar = ({ mode, toggleMode }) => {
 
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto align-items-lg-center">
-            <a
+            <Link
               className="nav-link active each-option"
               aria-current="page"
-              href="/"
+              to="/"
             >
               Home
-            </a>
-            <a className="nav-link active each-option" href="/">
+            </Link>
+            <Link className="nav-link active each-option" to="/about">
               About
-            </a>
+            </Link>
             <a className="nav-link active each-option" href="/">
               Resume
             </a>
