@@ -8,11 +8,19 @@
 @media screen and (min-width: 768px) {
   .about-bg-container {
     padding: 10px 70px;
+    height: 89vh;
   }
 }
 
 .about-info-container {
-  width: 60%;
+  width: 100%;
+  z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  .about-info-container {
+    width: 60%;
+  }
 }
 
 .about-heading {
@@ -113,11 +121,4 @@
 .about-social-icons {
   bottom: 0%;
   left: 4%;
-}
-
-@media screen and (max-width: 1024px) {
-  .about-info-container {
-    width: 100%;
-    z-index: 999;
-  }
 }
