@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
+  const [mode, setMode] = useState("light");
+
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+    } else {
+      setMode("light");
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar mode={mode} toggleMode={toggleMode} />
+      {/* <Home mode={mode} /> */}
+      <About mode={mode} />
     </div>
   );
 }
