@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 🎨 Portfolio Website - Frontend Implementation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **frontend replica** of a portfolio website design provided via [Figma](https://www.figma.com/design/kIgqpWpgs81nCy7a5d5siG/Portfolio-Website--Community-?node-id=0-1&p=f&t=PFQgfq4zCnbkoUXc-0). It features a responsive layout, theme switching (light/dark), and component-based structure built using **React.js**, **Bootstrap**, **HTML/CSS**, and **JavaScript**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
 
-### `npm start`
+- **React.js**
+- **Bootstrap 5**
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+├── public/
+├── src/
+│ ├── assets/ # Static assets like images
+│ ├── components/
+│ │ ├── NavBar/ # Navigation bar with theme toggle
+│ │ ├── Home/ # Hero section with intro
+│ │ ├── About/ # About section with bio
+│ │ └── SocialLinks/ # Social icons
+│ ├── App.css # Main CSS styles
+│ ├── App.js # Root component
+│ └── index.js # Entry point of the application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 How to Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Clone the Repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Amarnath201099/blockyAssignment.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd blockyAssignment
+```
 
-### `npm run eject`
+**Install Dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Start Development Server**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**View in Browser**
 
-## Learn More
+Open your browser and go to: http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Live Demo
 
-### Code Splitting
+Check out the live version of this project deployed on Vercel:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[View on Vercel](https://blocky-assignment-git-main-amarnath201099s-projects.vercel.app/)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📱 Responsive Design
 
-### Making a Progressive Web App
+The UI is fully responsive and adjusts seamlessly across different screen sizes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Desktop**: Flexbox layout with horizontal alignment
+- **Mobile**: Columnar stacking and hamburger menu navigation
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌗 Theme Toggle
 
-### Deployment
+A theme switcher is implemented using React `useState`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Switch between **Light** and **Dark** modes
+- Dynamically updates background colors, text colors, and icons
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✍️ Implementation Steps
+
+### 🔍 Figma Analysis
+
+- Carefully inspected layout dimensions, typography, and color palette
+
+### 🧱 Componentization
+
+- Converted key sections (`NavBar`, `Home`, `About`, etc.) into reusable React components
+
+### 💡 Bootstrap Integration
+
+- Utilized Bootstrap grid, utility classes, and responsive navbar
+- Overrode Bootstrap styles with custom CSS where needed
+
+### 🌓 Theme Mode
+
+- Created a toggle switch to switch themes using conditional `classNames` and styles
+
+### 🧭 Routing
+
+- Implemented navigation using `react-router-dom` for page transitions
+
+---
+
+## 🎨 Custom Bootstrap Customizations
+
+- Navbar behavior modified for dark mode
+- Custom button styling for action buttons
+- Overridden theme colors for buttons, texts, and backgrounds in both light and dark modes
+- Responsive breakpoints fine-tuned with Bootstrap classes
+
+---
+
+## 📌 Future Enhancements
+
+- Add routing for **Projects**, **Skills**, and **Resume** sections
+- Animate components on scroll using libraries like **AOS** or **Framer Motion**
+- Form handling and validation for the **Contact** section
+
+---
+
+## 📩 Contact Info
+
+**Amarnath**  
+📧 Email: [amarnath201099@gmail.com](mailto:amarnath201099@gmail.com)
